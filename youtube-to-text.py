@@ -34,7 +34,7 @@ chunk_size = 100 * 1000  # 100 秒
 chunks = [audio_file[i:i+chunk_size] for i in range(0, len(audio_file), chunk_size)]
 
 # 使用 OpenAI 的 Audio API 將每個小檔案轉成文字，然後合併在一起
-openai.api_key = "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"
+openai.api_key = "自己的Key"
 transcript = ""
 for chunk in chunks:
     with chunk.export("temp.wav", format="wav") as f:
